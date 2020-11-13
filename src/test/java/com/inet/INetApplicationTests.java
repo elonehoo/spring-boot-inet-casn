@@ -13,9 +13,28 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
 import java.io.FileOutputStream;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @SpringBootTest
 class INetApplicationTests {
+
+   /* @Test
+     void test(){
+        System.out.println(TIMEONE(new Date()));
+    }
+
+    private Boolean TIMEONE(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        int getDay = calendar.get(Calendar.DAY_OF_MONTH);
+        if(getDay == calendar.getActualMaximum(Calendar.DAY_OF_MONTH)){
+            return true;
+        }else{
+            return false;
+        }
+    }*/
+
 
 }

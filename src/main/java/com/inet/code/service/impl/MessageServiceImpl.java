@@ -25,10 +25,7 @@ import java.io.*;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * <p>
@@ -377,6 +374,13 @@ public class MessageServiceImpl extends ServiceImpl<MessageMapper, Message> impl
      */
     @Override
     public Result getReset(String path) {
+        if (! getEndOfTheMonth(new Date())) {
+            return new Result(403
+                    ,"forbidden"
+                    ,"禁止的"
+                    ,"尚未到达月底，无法点击"
+                    ,path);
+        }
         return new Result(
                 200
                 ,"OK"
@@ -435,10 +439,29 @@ public class MessageServiceImpl extends ServiceImpl<MessageMapper, Message> impl
         return new Result(500,"Error","修改失败","密码修改失败",path);
     }
 
+    /**
+     * 通过Token获取用户的名字
+     * @author HCY
+     * @since 2020-11-13
+     * @param token 令牌
+     * @param path 路径
+     * @return Result风格
+     */
     @Override
     public Result getUserName(String token, String path) {
         Message message = this.getById(token);
         return new Result(200,"OK","获取成功",message.getMemberName(),path);
+    }
+
+    private Boolean getEndOfTheMonth(Date date){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        int getDay = calendar.get(Calendar.DAY_OF_MONTH);
+        if(getDay == calendar.getActualMaximum(Calendar.DAY_OF_MONTH)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /**

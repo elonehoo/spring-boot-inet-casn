@@ -42,3 +42,23 @@
 2020-11-13 14:19:58.825 DEBUG 8060 --- [main] c.i.c.m.MessageMapper.getListMessage     : ==>  Preparing: SELECT t1.memberUUID AS memberUUID, t1.memberNumber AS memberNumber, t1.memberName AS memberName, t1.memberPhone AS memberPhone, t1.memberClazz as memberClazz, FORMAT((t2.checkTime / 60),1) AS totalTime FROM message AS t1 LEFT JOIN signpull AS t2 ON t1.memberNumber = t2.memberNumber
 2020-11-13 14:19:58.825 DEBUG 8060 --- [main] c.i.c.m.MessageMapper.getListMessage     : ==> Parameters: 
 2020-11-13 14:19:58.873 DEBUG 8060 --- [main] c.i.c.m.MessageMapper.getListMessage     : <==      Total: 113
+2020-11-13 19:17:52.633  INFO 3504 --- [main] com.inet.INetApplicationTests            : Starting INetApplicationTests on huchengyedeMacBook-Pro.local with PID 3504 (started by huchengye in /Volumes/1/JAVA/spring-boot-inet-casn)
+2020-11-13 19:17:52.635 DEBUG 3504 --- [main] com.inet.INetApplicationTests            : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-13 19:17:52.637  INFO 3504 --- [main] com.inet.INetApplicationTests            : No active profile set, falling back to default profiles: default
+2020-11-13 19:17:58.063  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.142  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.224  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.251  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.514  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.535  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.576  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.584  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.589  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.605  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.636  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.637  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.641  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.651  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.670  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.673  WARN 3504 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 19:17:58.712  INFO 3504 --- [main] com.inet.INetApplicationTests            : Started INetApplicationTests in 6.66 seconds (JVM running for 9.242)

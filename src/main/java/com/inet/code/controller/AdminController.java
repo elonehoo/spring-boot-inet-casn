@@ -137,6 +137,13 @@ public class AdminController {
         return messageService.getReset("/apply/Index/reset");
     }
 
+    /**
+     * 进行下载请求
+     * @author HCY
+     * @since 2020-11-12
+     * @param response 基本无作用
+     * @return Result
+     */
     @ApiOperation("返回下载的网址,对于网址进行GET请求")
     @GetMapping("/down")
     public Result getDown(HttpServletResponse response){
