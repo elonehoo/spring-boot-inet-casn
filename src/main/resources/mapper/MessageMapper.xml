@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inet.code.mapper.MessageMapper">
+    <!--查看学号是否被注册了-->
+    <select id="getByNumber" resultType="com.inet.code.entity.Message">
+        SELECT
+            message.memberUUID AS memberUUID,
+            message.memberName AS memberName,
+            message.memberNumber AS memberNumber,
+            message.memberPhone AS memberPhone,
+            message.memberClazz AS memberClazz,
+            message.memberUA AS memberUA
+        FROM
+            message
+        WHERE
+            memberNumber = #{studentNumber};
+    </select>
+    <!--登录操作,扫码模式-->
+    <select id="getByUa" resultType="com.inet.code.entity.Message">
+        SELECT
+            message.memberUUID AS memberUUID,
+            message.memberNumber AS memberNumber,
+            message.memberName AS memberName,
+            message.memberPhone AS memberPhone,
+            message.memberClazz AS memberClazz,
+            message.memberUA AS memberUA
+        FROM
+            message
+        WHERE
+            memberUA = #{ua}
+        LIMIT 1
+    </select>
+    <!--登录操作,并且更新ua-->
+    <select id="getByRegister" resultType="com.inet.code.entity.Message">
+        SELECT
+            t1.memberUUID AS memberUUID,
+            t1.memberNumber AS memberNumber,
+            t1.memberName AS memberName,
+            t1.memberPhone AS memberPhone,
+            t1.memberClazz AS memberClazz,
+            t1.memberUA AS memberUA
+        FROM
+            message AS t1
+                LEFT JOIN `cipher` AS t2 ON t1.memberNumber = t2.memberNumber
+        WHERE t2.memberNumber = #{studentNumber} AND t2.memberCipher = #{password}
+    </select>
+    <!--获取用户的集合-->
+    <select id="getListMessage" resultType="com.inet.code.entity.Message">
+        SELECT
+            t1.memberUUID AS memberUUID,
+            t1.memberNumber AS memberNumber,
+            t1.memberName AS memberName,
+            t1.memberPhone AS memberPhone,
+            t1.memberClazz as memberClazz,
+            FORMAT((t2.checkTime / 60),1) AS totalTime
+        FROM
+            message AS t1
+                LEFT JOIN signpull AS t2 ON t1.memberNumber = t2.memberNumber
+    </select>
+    <!--展示所有签到状态的同学-->
+    <select id="getStaterMessage" resultType="com.inet.code.entity.Message">
+        SELECT
+            t1.memberUUID AS memberUUID,
+            t1.memberNumber AS memberNumber,
+            t1.memberName AS memberName,
+            t2.checkIS AS checkIS
+        FROM
+            message AS t1
+                LEFT JOIN signpull AS t2 ON t1.memberNumber = t2.memberNumber
+        WHERE t2.checkIS = #{starter}
+    </select>
+    <!--通过姓名查询用户-->
+    <select id="getQueryName" resultType="com.inet.code.entity.Message">
+        SELECT
+            memberUUID AS memberUUID,
+            memberNumber AS memberNumber,
+            memberName AS memberName,
+            memberPhone AS memberPhone,
+            memberClazz AS memberClazz
+        FROM
+            message
+        WHERE
+            memberName LIKE #{name}
+    </select>
+
+    <select id="getByMessageUa" resultType="com.inet.code.entity.Message">
+        SELECT
+            memberUUID AS memberUUID,
+            memberNumber AS memberNumber,
+            memberName AS memberName,
+            memberPhone AS memberPhone,
+            memberClazz AS memberClazz,
+            memberUA AS memberUA
+        FROM
+            message
+        WHERE
+            memberUA = #{ua};
+    </select>
+</mapper>

@@ -1,0 +1,44 @@
+2020-11-13 14:18:58.730  INFO 2512 --- [main] com.inet.INetApplicationTests            : Starting INetApplicationTests on DESKTOP-TSJVEJ5 with PID 2512 (started by HCY in D:\8.items\spring-boot-inet-casn)
+2020-11-13 14:18:58.732 DEBUG 2512 --- [main] com.inet.INetApplicationTests            : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-13 14:18:58.733  INFO 2512 --- [main] com.inet.INetApplicationTests            : No active profile set, falling back to default profiles: default
+2020-11-13 14:19:01.553  WARN 2512 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:01.578  WARN 2512 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:01.591  WARN 2512 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:01.598  WARN 2512 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:01.669  WARN 2512 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:01.672  WARN 2512 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:01.679  WARN 2512 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:01.680  WARN 2512 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:01.680  WARN 2512 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:01.680  WARN 2512 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:01.684  WARN 2512 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:01.685  WARN 2512 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:01.700  INFO 2512 --- [main] com.inet.INetApplicationTests            : Started INetApplicationTests in 3.253 seconds (JVM running for 4.263)
+2020-11-13 14:19:02.921 DEBUG 2512 --- [main] c.i.c.m.MessageMapper.getByRegister      : ==>  Preparing: SELECT t1.memberUUID AS memberUUID, t1.memberNumber AS memberNumber, t1.memberName AS memberName, t1.memberPhone AS memberPhone, t1.memberClazz AS memberClazz, t1.memberUA AS memberUA FROM message AS t1 LEFT JOIN `cipher` AS t2 ON t1.memberNumber = t2.memberNumber WHERE t2.memberNumber = ? AND t2.memberCipher = ?
+2020-11-13 14:19:02.945 DEBUG 2512 --- [main] c.i.c.m.MessageMapper.getByRegister      : ==> Parameters: 2020002434(String), 2020002434(String)
+2020-11-13 14:19:02.990 DEBUG 2512 --- [main] c.i.c.m.MessageMapper.getByRegister      : <==      Total: 1
+2020-11-13 14:19:03.000 DEBUG 2512 --- [main] c.i.c.m.MessageMapper.getListMessage     : ==>  Preparing: SELECT t1.memberUUID AS memberUUID, t1.memberNumber AS memberNumber, t1.memberName AS memberName, t1.memberPhone AS memberPhone, t1.memberClazz as memberClazz, FORMAT((t2.checkTime / 60),1) AS totalTime FROM message AS t1 LEFT JOIN signpull AS t2 ON t1.memberNumber = t2.memberNumber
+2020-11-13 14:19:03.001 DEBUG 2512 --- [main] c.i.c.m.MessageMapper.getListMessage     : ==> Parameters: 
+2020-11-13 14:19:03.049 DEBUG 2512 --- [main] c.i.c.m.MessageMapper.getListMessage     : <==      Total: 113
+2020-11-13 14:19:54.811  INFO 8060 --- [main] com.inet.INetApplicationTests            : Starting INetApplicationTests on DESKTOP-TSJVEJ5 with PID 8060 (started by HCY in D:\8.items\spring-boot-inet-casn)
+2020-11-13 14:19:54.812 DEBUG 8060 --- [main] com.inet.INetApplicationTests            : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2020-11-13 14:19:54.813  INFO 8060 --- [main] com.inet.INetApplicationTests            : No active profile set, falling back to default profiles: default
+2020-11-13 14:19:57.812  WARN 8060 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:57.838  WARN 8060 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:57.855  WARN 8060 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:57.861  WARN 8060 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:57.943  WARN 8060 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:57.947  WARN 8060 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:57.958  WARN 8060 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:57.960  WARN 8060 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:57.961  WARN 8060 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:57.962  WARN 8060 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:57.969  WARN 8060 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:57.969  WARN 8060 --- [main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2020-11-13 14:19:57.987  INFO 8060 --- [main] com.inet.INetApplicationTests            : Started INetApplicationTests in 3.389 seconds (JVM running for 4.072)
+2020-11-13 14:19:58.742 DEBUG 8060 --- [main] c.i.c.m.MessageMapper.getByRegister      : ==>  Preparing: SELECT t1.memberUUID AS memberUUID, t1.memberNumber AS memberNumber, t1.memberName AS memberName, t1.memberPhone AS memberPhone, t1.memberClazz AS memberClazz, t1.memberUA AS memberUA FROM message AS t1 LEFT JOIN `cipher` AS t2 ON t1.memberNumber = t2.memberNumber WHERE t2.memberNumber = ? AND t2.memberCipher = ?
+2020-11-13 14:19:58.768 DEBUG 8060 --- [main] c.i.c.m.MessageMapper.getByRegister      : ==> Parameters: 2020002434(String), 2020002434(String)
+2020-11-13 14:19:58.815 DEBUG 8060 --- [main] c.i.c.m.MessageMapper.getByRegister      : <==      Total: 1
+2020-11-13 14:19:58.825 DEBUG 8060 --- [main] c.i.c.m.MessageMapper.getListMessage     : ==>  Preparing: SELECT t1.memberUUID AS memberUUID, t1.memberNumber AS memberNumber, t1.memberName AS memberName, t1.memberPhone AS memberPhone, t1.memberClazz as memberClazz, FORMAT((t2.checkTime / 60),1) AS totalTime FROM message AS t1 LEFT JOIN signpull AS t2 ON t1.memberNumber = t2.memberNumber
+2020-11-13 14:19:58.825 DEBUG 8060 --- [main] c.i.c.m.MessageMapper.getListMessage     : ==> Parameters: 
+2020-11-13 14:19:58.873 DEBUG 8060 --- [main] c.i.c.m.MessageMapper.getListMessage     : <==      Total: 113

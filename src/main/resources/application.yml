@@ -1,0 +1,32 @@
+server:
+  port: 9959
+  servlet:
+    context-path: /apply
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.104.249.85:3306/apply?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 42.192.41.187
+    port: 6379
+    password: hcy05080901
+  session:
+    store-type: redis
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 600MB
+logging:
+  level:
+    root: warn
+    com.inet: debug
+  file:
+    path: log/aws.log
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+
+

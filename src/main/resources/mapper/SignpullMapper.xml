@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inet.code.mapper.SignpullMapper">
+    <!--进行签到操作-->
+    <update id="updateByCondition">
+        UPDATE signpull
+        SET checkIS = #{status},checkStart = #{startTime}
+        WHERE
+            memberNumber = #{studentNumber};
+    </update>
+    <!--结束签到-->
+    <update id="updateSignOut">
+        UPDATE signpull
+        SET checkIS = #{status},checkTerminate=#{endTime},checkTime=#{totalTime}
+        WHERE
+            memberNumber = #{memberNumber};
+    </update>
+    <!--查看状态-->
+    <select id="getCondition" resultType="com.inet.code.entity.Signpull">
+        SELECT
+            t1.memberUUID AS memberUUID,
+            t1.memberNumber AS memberNumber,
+            t1.checkIS AS checkIS,
+            t1.checkStart AS checkStart,
+            t1.checkTerminate AS checkTerminate,
+            t1.checkTime AS checkTime
+        FROM
+            signpull AS t1
+                LEFT JOIN message AS t2 ON t1.memberNumber = t2.memberNumber
+        WHERE
+            memberUA = #{ua}
+    </select>
+    <!--修改状态-->
+    <select id="getConsent" resultType="java.lang.Boolean">
+        UPDATE signpull
+        SET checkIS = #{status}
+        WHERE
+            memberNumber = #{studentNumber}
+    </select>
+    <!--重置-->
+    <update id="getReset" >
+        UPDATE signpull
+        SET
+            checkIS = "false",
+            checkStart = "0",
+            checkTerminate = "0",
+            checkTime = "0"
+    </update>
+</mapper>
