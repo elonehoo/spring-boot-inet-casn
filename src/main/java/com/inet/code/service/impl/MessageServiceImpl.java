@@ -139,7 +139,7 @@ public class MessageServiceImpl extends ServiceImpl<MessageMapper, Message> impl
             //进行签退操作
             return this.getSignOut(ua,message.getMemberName(),path);
         }else {
-            return new Result(200,"OK", "联系管理员,同意签到请求,在进行操作哦!",message.getMemberName()+ "同学,请联系管理员",path);
+            return new Result(200,"OK", "联系管理员,同意签到请求,在进行操作哦!",message.getMemberName()+ "同学,联系管理员,同意签到请求,在进行操作哦!",path);
         }
     }
 
@@ -585,9 +585,9 @@ public class MessageServiceImpl extends ServiceImpl<MessageMapper, Message> impl
                 ,String.valueOf(totalTime));
 
         if (condition) {
-            return new Result(200,"OK","签退成功",name + "同学,签退成功",path);
+            return new Result(200,"OK","签退成功",name + "同学,签退成功,共签到" + totalTime + "分钟",path);
         }else {
-            return new Result(500,"Error","签退成功",name + "同学,签退成功",path);
+            return new Result(500,"Error","签退失败",name + "同学,签退失败",path);
         }
     }
 }
