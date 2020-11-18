@@ -196,16 +196,9 @@ public class MessageServiceImpl extends ServiceImpl<MessageMapper, Message> impl
                     ,"登录失败"
                     ,path);
         }
-        //判断用户的ua是否为空
-        try {
-            if ("".equals(message.getMemberUA())){
-                message.setMemberUA(ua);
-                this.updateById(message);
-            }
-        } catch (Exception e) {
-            message.setMemberUA(ua);
-            this.updateById(message);
-        }
+        //不判断ua是否为空,凡是登录,即可更新ua
+        message.setMemberUA(ua);
+        this.updateById(message);
 
         Map<String, Object> map = new HashMap<>();
         map.put("token",message.getMemberUUID());
