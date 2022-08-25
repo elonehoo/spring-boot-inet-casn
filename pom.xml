@@ -60,7 +60,7 @@
         <dependency>
             <groupId>cn.afterturn</groupId>
             <artifactId>easypoi-annotation</artifactId>
-            <version>3.3.0</version>
+            <version>4.4.0</version>
         </dependency>
 
         <!--mp-->
